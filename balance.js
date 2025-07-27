@@ -24,7 +24,7 @@ saveBtn.onclick = () => {
   
   
   const value = localStorage.getItem('balance');
-
+if(parseInt(textInput.value) <= 500000000){
 if (value === null) {
 console.log(textInput.value);
   localStorage.setItem('balance',textInput.value+'');
@@ -33,7 +33,10 @@ console.log(textInput.value);
   localStorage.setItem('balance',(parseInt(textInput.value) + parseInt(localStorage.getItem('balance'))));
   balanceInfo.innerHTML = 'Current Balance: ₹' + localStorage.getItem('balance');
 }
-
+}
+else{
+  alert('You cannot add more than 50Cr. to your balance.');  
+}
 };
 
 window.onclick = function(event) {
