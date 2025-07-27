@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <button class="add-balance-btn" id="addBalance">add balance</button>
+    <h1 class="main-title">Crypto Portfolio</h1>
+
+    <h1 class="balance-text" id="balanceInfo">Current Balance: ₹0</h1>
+</div>
+  <hr></hr>
+
+<div class="pnlContainer">
+    <div class="cont">
+    <h1 class="textPNL" id="pnl">P/L: ₹0</h1>
+    <h1 class="textPNL" id="invested">Invested: ₹0</h1>
+    <h1 class="textPNL" id="value">Value: ₹0</h1>
+    </div>
+    <h1 class="textPNL" id="realizedMoney">Sold: ₹0</h1>
+</div>
+
+<hr style="opacity: 0.2;">
+
+<div class="buy">
+<button id="buyCrypto">‎‎ ‎ ‎ ‎ ‎ ‎ buy crypto ‎ ‎ ‎ ‎ ‎ ‎ </button>
+</div>
+
+<div id="portfolio-dashboard" class="dashboard-container"></div>
+
+<div class="buyModal" id="buyModalID">
+  
+    <div class="contentBuy" id="contentBuyID">
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span id="closeBtn" class="close">&times;</span>
+      <h2 style="font-family: 'Poppins';">add amount</h2>
+      <input type="number" id="textInput" min="1" placeholder="here"></input>
+      <div class="modal-buttons">
+        <button id="saveBtn">Save</button>
+        <button id="cancelBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+<script src="balance.js" defer></script>
+<script src="script.js" defer></script>
+
+</html>
