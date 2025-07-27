@@ -1,7 +1,7 @@
 
 
 
-
+const clear = document.getElementById("clearAll");
 const openBtn = document.getElementById("addBalance");
 const modal = document.getElementById("myModal");
 const closeBtn = document.getElementById("closeBtn");
@@ -18,11 +18,14 @@ openBtn.onclick = () => {
 closeBtn.onclick = cancelBtn.onclick = () => {
   modal.style.display = "none";
 };
-
+clear.onclick = () => {
+  localStorage.clear();
+location.reload();
+};
 saveBtn.onclick = () => {
   modal.style.display = "none";
   
-  
+
   const value = localStorage.getItem('balance');
 if(parseInt(textInput.value) <= 500000000){
 if (value === null) {
